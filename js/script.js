@@ -1,6 +1,8 @@
  $(document).ready(function() {
 	$(".image").click(function(){
-		$('.selected').hide();
-		$(this).children('.selected').show();
+		$(".image").removeClass("selected");
+		$(".image").addClass("not-selected");
+		$(this).addClass("selected");
+		$(this).removeClass("not-selected");
 	});	
  });
