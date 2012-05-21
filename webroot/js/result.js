@@ -25,20 +25,25 @@ function percentageGraph( element, radius, x, y, perc, time_left, perc_params, p
 
 var canvas = Raphael(element, 230, 120);
 
+//background
 canvas.percentageArc(x,y, 45, 100).attr({ stroke : "white", "stroke-width" : 91 });
 
+//border
 canvas.percentageArc(x,y, radius, 100).attr({ stroke : "white", "stroke-width" : 27 });
 
+//other participant
 canvas.percentageArc(x,y, radius, 100).attr(params);   
 
-canvas.percentageArc(x,y, radius, perc+1 ).attr({ stroke : "white", "stroke-width" : 23 });    
-    
+//separator
+if( perc < 100 ){
+  canvas.percentageArc(x,y, radius, perc+1 ).attr({ stroke : "white", "stroke-width" : 23 });    
+}
+   
+//perc 
 canvas.percentageArc(x,y, radius, perc).attr(perc_params);
    
     
 var Font = {'text-anchor':'middle', 'font-size': 25, 'font-family' : 'helvetica', 'fill': '#F79518'};
-
-//canvas.text( x, radius/2, perc + "%" ).attr( Font );  
     
 Font = {'text-anchor':'middle', 'font-size': 11, 'font-family' : 'helvetica', 'fill': 'rgb(214, 214, 214)'};
 
