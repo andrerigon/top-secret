@@ -1,0 +1,11 @@
+ npm install express
+ npm install ejs
+ npm install  redis
+
+ mac:
+ brew install redis
+ redis-server /usr/local/etc/redis.conf
+
+ //USAGE
+ / ->index;
+ /reset -> reset votes

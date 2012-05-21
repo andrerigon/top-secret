@@ -34,18 +34,14 @@
 
 	<div class="participants row">
 			<div class="participant first span4"><strong>Participante 1</strong>
-				<div class="participant image first not-selected">
-					<div class="selected" style="display:none"></div>
-				</div>
+				<div class="participant image first not-selected"></div>
 				<div class="caption"> 
 					<small>Para eliminar o <p class="black"><strong>Participante 1</strong></p> pelo telefone <br/>disque
 					 <p class="black"><strong>0800-123-001</strong></p> ou mande um SMS para <p class="black"><strong>8001</strong></p></small>
 				</div>
 			</div>
 			<div class="participant second span4"><strong>Participante 2</strong>
-				<div class="participant image second not-selected">
-					<div class="selected" style="display:none"></div>
-				</div>
+				<div class="participant image second not-selected"></div>
 				<div class="caption"> 
 					<small>Para eliminar o <p class="black"><strong>Participante 2</strong></p> pelo telefone <br/>disque
 					 <p class="black"><strong>0800-123-002</strong></p> ou mande um SMS para <p class="black"><strong>8002</strong></p></small>
@@ -56,7 +52,10 @@
 <br/>	
 	<div class="action"  align="center">
 		<br/>
-	<a class="btn btn-primary btn-large">Envie seu voto agora</a>
+	<form id="voting" method="post" action="result">
+		<input type="submit" class="btn btn-primary btn-large" value="Envie seu voto agora "/>
+		<input type="hidden" id="vote" name="vote" value=""/>
+	</form>
 	</div>
 </div>
 

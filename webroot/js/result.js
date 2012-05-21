@@ -21,7 +21,7 @@ Raphael.fn.percentageArc = function (x,y, radius, value) {
   return this.path(path);
 };
 
-function percentageGraph( element, radius, x, y, perc, perc_params, params ){
+function percentageGraph( element, radius, x, y, perc, time_left, perc_params, params ){
 
 var canvas = Raphael(element, 230, 120);
 
@@ -46,7 +46,7 @@ canvas.text( x, radius/2 , 'FALTAM'  ).attr( Font );
 
 Font = {'text-anchor':'middle', 'font-size': 25, 'font-family' : 'helvetica', 'fill': '#F79518'};
 
-canvas.text( x, radius/2 + 25 , '10:31:55'  ).attr( Font ); 
+canvas.text( x, radius/2 + 25 , time_left  ).attr( Font ); 
 
 Font = {'text-anchor':'middle', 'font-size': 11, 'font-family' : 'helvetica', 'fill': 'rgb(214, 214, 214)'};
 
@@ -54,6 +54,7 @@ canvas.text( x, radius/2 + 50, 'PARA ENCERRAR A VOTAÇÃO'  ).attr( Font );
  
 }
 
-var value = parseInt($("#percentage").attr("value"));
+var value = parseInt($("#percentage").attr("perc"));
+var time = $("#percentage").attr("time");
 
-percentageGraph( "votes", 97, 110, 115, value, { stroke : "#F79518", "stroke-width" : 23 }, { stroke : "rgb(214, 214, 214)", "stroke-width" : 23 } );
+percentageGraph( "votes", 97, 110, 115, value,  time, { stroke : "#F79518", "stroke-width" : 23 }, { stroke : "rgb(214, 214, 214)", "stroke-width" : 23 } );
