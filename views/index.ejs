@@ -51,8 +51,18 @@
 <br/><br/><br/>
 <br/>	
 	<div class="action"  align="center">
+		 <script type="text/javascript">
+ var RecaptchaOptions = {
+    theme : 'clean'
+ };
+ </script>
+
 		<br/>
 	<form id="voting" method="post" action="result">
+		<div id="captcha" class="modal fade">
+			<button class="close" data-dismiss="modal">×</button>
+			<%- recaptcha_form %>
+		</div>
 		<input type="submit" class="btn btn-primary btn-large" value="Envie seu voto agora "/>
 		<input type="hidden" id="vote" name="vote" value=""/>
 	</form>
@@ -60,10 +70,10 @@
 </div>
 
 
-
 </body>
 
  <script type="text/javascript" src="js/jquery.min.js"></script>
+ <script type="text/javascript" src="js/bootstrap-modal.js"></script>
   <script type="text/javascript" src="js/script.js" ></script>
 
 </html>

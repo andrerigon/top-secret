@@ -1,6 +1,7 @@
  npm install express
  npm install ejs
  npm install  redis
+ npm install -g recaptcha-async
 
  mac:
  brew install redis
