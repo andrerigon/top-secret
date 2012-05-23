@@ -1,12 +1,26 @@
+ Download and install node (with npm):
+
+ http://nodejs.org/#download
+
+ and redis:
+
+ wget http://redis.googlecode.com/files/redis-2.4.13.tar.gz
+
+ or with homebrew:
+
+ brew install redis
+
+ Inside redis folder run:
+
+ ./src/redis-server
+
+ Install node modules bellow using npm:
+
  npm install express
  npm install ejs
- npm install  redis
+ npm install redis
  npm install -g recaptcha-async
 
- mac:
- brew install redis
- redis-server /usr/local/etc/redis.conf
 
- //USAGE
- / ->index;
- /reset -> reset votes
+ 
+ 

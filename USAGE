@@ -1,0 +1,34 @@
+=================================================
+
+	RUN
+
+=================================================
+
+node js/server.js
+
+=================================================
+
+	ACCESS:
+
+=================================================
+
+ http://127.0.0.1:8124
+
+=================================================
+
+	MISC
+
+=================================================
+
+
+ if you want to reset the voting count go to:
+
+ http://127.0.0.1:8124/reset
+
+ 
+ to test performance, in the test dir run:
+
+ test.sh <number of access> <concurrency>
+
+ it will launch two ab tests with votes for both contestants.
+ 
