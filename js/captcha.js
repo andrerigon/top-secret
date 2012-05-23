@@ -20,21 +20,19 @@ Captcha.prototype.recaptcha = function ( ){
 	return recaptcha.toHTML();
 };
 
-Captcha.prototype.verify_captcha = function (req, res, callback){
+Captcha.prototype.verify_captcha = function (req, res, success_cb, error){
 	if(!this.active){
-		callback();
+		success_cb();
 		return;
 	} 
 	
     var recaptcha = new Recaptcha(PUBLIC_KEY, PRIVATE_KEY, data_from(req));
-
     recaptcha.verify(function(success, error_code) {
         if (success) {
-            callback();
+            success_cb();
         }
         else {
-        	res.writeHead(500);
-            res.end("wrong captcha!");
+        	error();
         }
     });
 };

@@ -26,7 +26,10 @@ Renderer.prototype.result = function(req, res){
 
 Renderer.prototype.render = function(req, res){
 	var render = this;
-	this.captcha.verify_captcha(req, res, function(){ render.result( req, res ) });
+	this.captcha.verify_captcha(req, res, function(){ render.result( req, res ) }, function(){
+		res.writeHead(500);
+        res.end("wrong captcha!");
+	});
 }
 
 Renderer.prototype.voteFor = function(vote, res){

@@ -10,7 +10,8 @@ app.get('/', function(req, res) {
     res.render('index', {
         layout: false,
         locals: {
-            recaptcha_form: renderer.build_captcha()
+            recaptcha_form: renderer.build_captcha(),
+            message: ''
         }
     });
 });
@@ -51,7 +52,7 @@ function db(){
 }
 
 function captcha(){
-	return  require('./captcha').create(false);
+	return  require('./captcha').create(true);
 }
 
 function voting(){

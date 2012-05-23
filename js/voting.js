@@ -16,7 +16,7 @@ Voting.prototype.end_in_days = function (days){
 }
 
 Voting.prototype.reset = function(){
-	for (i in this.options){
+	for (var i in this.options){
 		this.db.set(key_name(this.options[i]),"0");
 	}
 }

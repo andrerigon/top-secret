@@ -1,4 +1,8 @@
  $(document).ready(function() {
+ 	if( $('#message').text() != '' ){
+ 		alert($('#message').text());
+ 	}
+
 	$(".image").click(function(){
 		$(".image").removeClass("selected");
 		$(".image").addClass("not-selected");

@@ -21,6 +21,10 @@
  npm install redis
  npm install -g recaptcha-async
 
+ //tests
+ npm install should
+ npm install mocha
+
 
  
  
