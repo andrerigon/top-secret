@@ -35,6 +35,9 @@ mocha mocha/*
 
  http://127.0.0.1:8124/reset
 
+ if you want to ignore captcha, just invoke:
+
+ node js/server.js false
  
  to test performance, in the test dir run:
 

@@ -52,7 +52,8 @@ function db(){
 }
 
 function captcha(){
-	return  require('./captcha').create(true);
+	var use_captcha = process.argv[2] == undefined ? true :  process.argv[2] === 'true';
+	return  require('./captcha').create(use_captcha);
 }
 
 function voting(){
