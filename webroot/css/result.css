@@ -9,9 +9,14 @@
 	top: 247px;
 	position: fixed;
 	font-family: helvetica;
-	font-size: 350%;
+	font-size: 500%;
 	color: #ff9c00;
 	background-color: transparent;
+	text-align: center;
+}
+
+#percentage p{
+	font-size: 50%;
 }
 
 .msg{
