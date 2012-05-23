@@ -57,6 +57,7 @@ function captcha(){
 
 function voting(){
 	voting = require('./voting').create(db(), [1,2]);
+	voting.reset();
 	voting.end_in_days(2);
 	return voting;
 }

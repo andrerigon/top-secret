@@ -6,6 +6,8 @@
 
 node js/server.js
 
+when started, the server will reset the vote count
+
 =================================================
 
 	ACCESS:

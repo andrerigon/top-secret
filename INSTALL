@@ -19,6 +19,7 @@
  npm install express
  npm install ejs
  npm install redis
+ npm install recaptcha
  npm install -g recaptcha-async
 
  //tests
